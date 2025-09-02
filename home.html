@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Janala</title>
+
+  <!-- Daisy Ui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Remix Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="w-full">
+    <nav class="p-4 md:px-18 md:py-5 lg:px-24 lg:py-7 bg-blue-200/26 shadow flex items-center justify-between">
+      <div class="flex items-center text-[16px] lg:text-[28px] font-bold">
+        <span class="">English</span>
+        <img src="./assets/logo.png" alt="English Janala Logo">
+        <span class="">জানালা</span>
+      </div>
+      <div class="flex items-center justify-center gap-3">
+        <button class="btn btn-outline btn-primary btn-sm md:btn-md  "><i class="ri-question-fill"></i>
+          FAQ</button>
+        <button class="btn btn-outline btn-primary btn-sm md:btn-md "><i class="ri-book-open-fill"></i>
+          Learn</button>
+        <button id="logout-btn" class="btn btn-outline btn-primary btn-sm md:btn-md "><i
+            class="ri-logout-box-r-line"></i>
+          Logout</button>
+      </div>
+    </nav>
+  </header>
+  <main class="w-full">
+    <section class="p-4 md:px-18 md:py-5 lg:px-24 lg:py-7 items-center flex flex-col lg:m-20 space-y-10">
+      <h2 class="font-bold text-5xl"><span class="text-sky-400">Let's</span> Learn Vocabularies</h2>
+      <div class="flex gap-4">
+        <button class="btn btn-outline btn-primary btn-sm md:btn-md "><i class="ri-book-open-fill"></i>
+          Learn</button>
+        <button class="btn btn-outline btn-primary btn-sm md:btn-md "><i class="ri-book-open-fill"></i>
+          Learn</button>
+        <button class="btn btn-outline btn-primary btn-sm md:btn-md "><i class="ri-book-open-fill"></i>
+          Learn</button>
+        <button class="btn btn-outline btn-primary btn-sm md:btn-md "><i class="ri-book-open-fill"></i>
+          Learn</button>
+        <button class="btn btn-outline btn-primary btn-sm md:btn-md "><i class="ri-book-open-fill"></i>
+          Learn</button>
+        <button class="btn btn-outline btn-primary btn-sm md:btn-md "><i class="ri-book-open-fill"></i>
+          Learn</button>
+      </div>
+      <div class="bg-zinc-50 p-16 w-full text-center rounded-3xl">
+        <p>আপনি এখনো কোন Lesson Select করেন নি</p>
+        <h3 class="text-4xl font-semibold mt-6">একটি Lesson Select করুন।</h3>
+      </div>
+    </section>
+  </main>
+
+
+
+  <script src="./script.js"></script>
+  <script src="./home.js"></script>
+</body>
+
+</html>
