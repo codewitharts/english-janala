@@ -1,4 +1,7 @@
 let currentLessons = [];
+const userName = localStorage.getItem('userName');
+document.getElementById('greetings').textContent = `😇 Hello, ${userName} `;
+
 function createLessonCard(lesson) {
   const createCard = document.createElement('div');
   createCard.classList.add('bg-white', 'p-6', 'text-black', 'rounded-xl');

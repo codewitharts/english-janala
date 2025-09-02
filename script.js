@@ -4,12 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     startedBtn.addEventListener('click', e => {
       e.preventDefault();
 
-      if (
-        startedBtn.parentNode.children[1].value === '' ||
-        startedBtn.parentNode.children[3].value === ''
-      ) {
+      const nameInput = startedBtn.parentNode.children[1].value.trim();
+      const anotherInput = startedBtn.parentNode.children[3].value.trim();
+
+      if (nameInput === '' || anotherInput === '') {
         return alert('Please give your name');
       }
+      localStorage.setItem('userName', nameInput);
 
       window.location = 'home.html';
     });
