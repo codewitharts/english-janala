@@ -25,8 +25,8 @@
         <span class="">জানালা</span>
       </div>
       <div class="flex items-center justify-center gap-3">
-        <button class="btn btn-outline btn-primary btn-sm md:btn-md  "><i class="ri-question-fill"></i>
-          FAQ</button>
+        <a href="#faq"><button class="btn btn-outline btn-primary btn-sm md:btn-md  "><i class="ri-question-fill"></i>
+            FAQ</button></a>
         <button class="btn btn-outline btn-primary btn-sm md:btn-md "><i class="ri-book-open-fill"></i>
           Learn</button>
         <button id="logout-btn" class="btn btn-outline btn-primary btn-sm md:btn-md "><i
@@ -60,7 +60,61 @@
         <p>আপনি এখনো কোন Lesson Select করেন নি</p>
         <h3 class="text-4xl font-semibold mt-6">একটি Lesson Select করুন।</h3>
       </div>
+
+      <dialog id="infoModal" class="modal">
+        <div class="modal-box">
+          <div id="modal-content">
+
+          </div>
+          <div class="modal-action">
+            <form method="dialog" class="">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn btn-primary">Complete Learning</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+
     </section>
+    <section class="p-6 md:px-18 md:py-5 lg:p-24 " id="faq">
+      <h2 class="text-center text-4xl font-bold my-10"><span class="text-sky-400">Frequently</span> Asked Questions</h2>
+      <div class="space-y-4">
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">How can I start learning English on this website?</div>
+          <div class="collapse-content text-sm">You can start by exploring our beginner lessons, interactive exercises,
+            and quizzes. We also offer structured courses to
+            guide you step by step.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold">Is this website free to use?</div>
+          <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions
+            sent to
+            your email.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold">3. Do I need to create an account?</div>
+          <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.
+          </div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold">4. How can I build my English vocabulary?</div>
+          <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.
+          </div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold">5. Do you offer certificates for completed courses?</div>
+          <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
   <footer class="border-t-2 border-red-200 w-full ">
     <div
