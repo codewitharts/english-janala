@@ -7,6 +7,12 @@ newGreeting.innerHTML = `<span>Welcome, ${name}</span>`;
 greetingWithName.appendChild(newGreeting);
 */
 
+function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = 'en-EN'; // English
+  window.speechSynthesis.speak(utterance);
+}
+
 const lessonBtn = document.getElementById('main-lessons');
 lessonBtn.addEventListener('click', function (e) {
   console.log(e.target);
@@ -44,7 +50,9 @@ lessonBtn.addEventListener('click', function (e) {
       </div>
       <div class="flex justify-between mt-16 text-2xl text-gray-700">
         <i class="ri-information-2-fill bg-blue-500/10 p-2 rounded-md"></i>
-        <i class="ri-volume-up-fill bg-blue-500/10 p-2 rounded-md"></i>
+        <i class="ri-volume-up-fill bg-blue-500/10 p-2 rounded-md" onclick="pronounceWord('${
+          lesson.word
+        }')"></i>
       </div>
       </div>
     
