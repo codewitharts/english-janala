@@ -1,3 +1,9 @@
+function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = 'en-EN'; // English
+  window.speechSynthesis.speak(utterance);
+}
+
 const createElements = arr => {
   const htmlElements = arr.map(el => `<span class="btn"> ${el}</span>`);
   return htmlElements.join(' ');
@@ -97,20 +103,22 @@ const displayLevelWord = lessonWords => {
     wordCard.innerHTML = `
         
     <div class="bg-white rounded-xl shadow-sm px-6 py-10 space-y-6 text-center">
-      <h3 class="text-2xl lg:text-3xl font-bold">${
+      <h3 class="text-xl lg:text-3xl font-bold">${
         word.word ? word.word : 'শব্দ পাওয়া যায়নি'
       } (${
       word.pronunciation ? word.pronunciation : 'উচ্চারণ পাওয়া যায়নি'
     })</h3>
       <p class="text-lg font-medium"> -- Meaning -- </p>
-      <h3 class="text-2xl lg:text-3xl font-bangla font-bold">"${
+      <h3 class="text-xl lg:text-3xl font-bangla font-bold">"${
         word.meaning ? word.meaning : 'অর্থ পাওয়া যায়নি'
       }"</h3>
       <div class="flex justify-between items-center mt-14">
         <button onclick="loadWordDetail(${
           word.id
         })" class="btn bg-blue-500/10 text-gray-700 text-lg"><i class="fa-solid fa-circle-info"></i></button>
-        <button class="btn bg-blue-500/10 text-gray-700 text-lg"><i class="fa-solid fa-volume-high"></i></button>
+        <button onclick="pronounceWord('${
+          word.word
+        }')" class="btn bg-blue-500/10 text-gray-700 text-lg"><i class="fa-solid fa-volume-high"></i></button>
       </div>
     </div>
 
